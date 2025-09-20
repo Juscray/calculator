@@ -10,43 +10,43 @@
 <body>
     <div class="mainContainer">
 
-        <input class="display">
+        <input class="display" value="" readonly>
 
         <div class="btn">   
             <button type="button">DEL</button>
             <button type="button">AC</button>
-            <button type="button">%</button>
-            <button class="lastBtn" type="button">÷</button>
+            <button data-*="%" class="division" type="button">%</button>
+            <button data-*="/" class="lastBtn" type="button">÷</button>
         </div>
 
     
         <div class="btn">
-            <button type="button">7</button>
-            <button type="button">8</button>
-            <button type="button">9</button>
-            <button class="lastBtn" type="button">X</button>
+            <button data-*="7" type="button">7</button>
+            <button data-*="8" type="button">8</button>
+            <button data-*="9" type="button">9</button>
+            <button data-*="*" class="lastBtn" type="button">X</button>
         </div>
 
         <div class="btn">
-            <button type="button">4</button>
-            <button type="button">5</button>
-            <button type="button">6</button>
-            <button class="lastBtn" type="button">-</button>
+            <button data-*="4" type="button">4</button>
+            <button data-*="5" type="button">5</button>
+            <button data-*="6" type="button">6</button>
+            <button data-*="-" class="lastBtn" type="button">-</button>
         </div>
 
         <div class="btn">
-            <button type="button">1</button>
-            <button type="button">2</button>
-            <button type="button">3</button>
-            <button class="lastBtn" type="button">+</button>
+            <button data-*="1" type="button">1</button>
+            <button data-*="2" type="button">2</button>
+            <button data-*="3" type="button">3</button>
+            <button data-*="+" class="lastBtn" type="button">+</button>
         </div>
 
         <div class="btn">
 
             <button type="button">+/-</button>
-            <button type="button">0</button>
+            <button data-*="0" type="button">0</button>
             <button type="button">.</button>
-            <button class="lastBtn" type="button">=</button>
+            <button id="Equals" class="lastBtn" type="button">=</button>
         </div>
 
     </div>
