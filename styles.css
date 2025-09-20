@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: black;
+    border-radius: 15px;
+    
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn button {
+    border-radius: 40%;
+    width: 75px;
+    height: 75px;
+    background-color: grey;
+    font-size: 24px;
+}
+
+.btn .lastBtn {
+    background-color: rgb(212, 212, 4);
+}
+
+.mainContainer .display {
+    width: 95%;
+    border-radius: 5px;
+    flex: 1;
+    font-size: 20px;
+    text-align: center;
+}
