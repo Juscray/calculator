@@ -30,7 +30,7 @@ function operate(userInput){
         return total + curr;
     });
     console.log("Total: " + additionTotal);
-    return additionTotal;
+    return additionTotal.toFixed(2);
 
    } else if (userInput.includes("*")){
         splitMultiplicationInput = userInput.split("*").map(Number);
@@ -38,7 +38,7 @@ function operate(userInput){
             return total * curr;
         });
         console.log("Product: " + multiplicationTotal);
-        return multiplicationTotal;
+        return multiplicationTotal.toFixed(2);
 
    } else if (userInput.includes("/")){
         splitDivisionInput = userInput.split("/").map(Number);
@@ -46,7 +46,15 @@ function operate(userInput){
             return total / curr;
         });
         console.log("Product: " + divisionTotal);
-        return divisionTotal;
+        return divisionTotal.toFixed(2);
+
+   } else if (userInput.includes("%")) {
+        splitModulusInput = userInput.split("%").map(Number);
+        modulusTotal = splitModulusInput.reduce((total, curr) => {
+            return total % curr;
+        });
+        console.log("Remainder: " + modulusTotal);
+        return modulusTotal.toFixed(2);
 
    } else if (userInput.includes("-")){
         splitSubtractionInput = userInput.split("-").map(Number);
@@ -54,21 +62,23 @@ function operate(userInput){
             return total - curr;
         });
         console.log("Total: " + SubtractionTotal);
-        return SubtractionTotal;
+        return SubtractionTotal.toFixed(2);
    }
 }
 
-// operate();
-
 const displayScreen = document.querySelector(".display")
 const EqualsSign = document.querySelector("#Equals");
+const modulusSign = document.querySelector(".division");
 const buttons = document.querySelectorAll(".mainContainer button");
+const deleteButton = document.querySelector(".deletion");
 buttons.forEach(button => {
     button.addEventListener("click", () => {
       if (button == EqualsSign) {
         displayScreen.value +=  "=" + operate(displayScreen.value);
-        
-      } else {
+        } else if (button == deleteButton) {
+            displayScreen.value = "";
+
+        } else {
         const num = button.getAttribute("data-*");
         displayScreen.value += num;
         }
